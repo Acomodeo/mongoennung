@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Acomodeo/mongoennung/issues"
   },
-  "homepage": "https://github.com/Acomodeo/mongoennung#readme"
+  "homepage": "https://github.com/Acomodeo/mongoennung#readme",
+  "dependencies": {
+    "mongodb": "^2.2.10"
+  }
 }
