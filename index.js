@@ -7,12 +7,11 @@ var db = null;
 
 function connect(url, cb) {
     if(cb == undefined) {
-        if(DB_URL == undefined) {
-            return cb(new Error('Database URL to connect to is missing (pass either as argument or in the MONGO_URL environent variable)'));
-        }
-
         cb = url;
         url = DB_URL;
+
+        if(DB_URL == undefined)
+            return cb(new Error('Database URL to connect to is missing (pass either as argument or in the MONGO_URL environent variable)'));
     }
 
     mongoClient.connect(url, function(err, dbResult) {
